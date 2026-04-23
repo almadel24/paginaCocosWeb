@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocos Martita | Frescura Tropical</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-[#fdf6e3] text-gray-800">
+
+  <!-- Navegación -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-green-900/80 backdrop-blur-md shadow-lg">
+  <div class="flex items-center gap-4">
+    <img src="img/logo .png" alt="Logo Cocos Martita" class="w-14 h-14 rounded-full border-2 border-white object-cover">
+    <span class="text-white font-bold text-xl">Cocos Martita</span>
+  </div>
+  <div class="hidden md:flex gap-8 text-sm tracking-wide text-white">
+    <a href="#inicio" class="hover:text-yellow-300 transition">Inicio</a>
+    <a href="#nosotros" class="hover:text-yellow-300 transition">Nosotros</a>
+    <a href="#valores" class="hover:text-yellow-300 transition">Valores</a>
+    <a href="#equipo" class="hover:text-yellow-300 transition">Equipo</a>
+    <a href="#envios" class="hover:text-yellow-300 transition">Envíos</a>
+    <a href="#contacto" class="hover:text-yellow-300 transition">Contacto</a>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <section id="inicio" class="relative min-h-screen flex items-center justify-center text-center">
+    <div class="absolute inset-0">
+      <img src="img/hero.png" alt="Playa tropical" class="w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-r from-green-900/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl px-6">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Frescura Tropical 🌴</h1>
+      <p class="text-lg md:text-xl text-yellow-100 mb-8">Cocos frescos al mayoreo y menudeo, directo del productor.</p>
+      <a href="#contacto" class="px-8 py-4 bg-yellow-400 text-green-900 font-bold rounded-full shadow-lg hover:scale-105 transition">Pedir por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Bloque completo Nosotros → Envíos -->
+ <!-- Sección Nosotros -->
+<section id="nosotros" class="relative py-24 md:py-32 text-white">
+  <div class="absolute inset-0">
+    <img src="img/coco.jpg" alt="Fondo Nosotros"
+         class="w-full h-full object-cover bg-fixed">
+    <div class="absolute inset-0 bg-[#a67c52]/60"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+    <h2 class="text-5xl font-bold mb-6">Nosotros 🌴</h2>
+    <p class="text-yellow-100 mb-12">Conoce nuestra Historia, Misión y Visión</p>
+
+    <!-- Historia -->
+    <div class="glass-card p-10 rounded-3xl shadow-lg mb-12 bg-white/90 text-gray-900">
+      <h3 class="text-3xl font-bold mb-6">🥥 📖 Historia</h3>
+      <p>Cocos Martita nace como un pequeño negocio familiar en la región de Oaxaca, impulsado por el trabajo del campo y la tradición de aprovechar los recursos naturales de la zona.</p>
+      <p>Desde sus inicios, la idea fue simple: llevar coco fresco, recién cortado y de calidad directamente del productor al consumidor, sin intermediarios.</p>
+      <p>Con esfuerzo, dedicación y la confianza de nuestros primeros clientes, el negocio fue creciendo poco a poco, convirtiéndose en una opción confiable para quienes buscan un producto natural y fresco.</p>
+      <p>Hoy, Cocos Martita mantiene la misma esencia con la que comenzó: trabajo honesto, cercanía con la gente y la entrega de un producto fresco que conserva todo su sabor original.</p>
+    </div>
+
+    <!-- Misión y Visión -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h3 class="text-2xl font-bold mb-4">🎯 Misión</h3>
+        <p>Ofrecer coco fresco recién cortado de la más alta calidad, llevando un producto natural directamente del campo hasta las manos de nuestros clientes, garantizando frescura, confianza y un servicio honesto en cada entrega.</p>
+      </div>
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h3 class="text-2xl font-bold mb-4">🌱 Visión</h3>
+        <p>Ser una marca reconocida a nivel regional por la calidad y frescura de nuestros cocos, creciendo de manera sostenible y llegando a más clientes, sin perder la esencia de un negocio familiar basado en el trabajo honesto y la cercanía con la comunidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Valores -->
+<section id="valores" class="relative py-24 md:py-32 text-white">
+  <div class="absolute inset-0">
+    <img src="img/val.jpg" alt="Fondo Valores"
+         class="w-full h-full object-cover bg-fixed">
+    <div class="absolute inset-0 bg-[#a67c52]/60"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+    <h2 class="text-5xl font-bold mb-6">Nuestros Valores 🌱</h2>
+    <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
+    <p class="text-yellow-100 mb-12">Los pilares que sostienen nuestro trabajo y definen cada entrega de Cocos Martita.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h4 class="text-green-900 font-bold text-xl mb-3">🤝 Honestidad</h4>
+        <p>Actuamos con transparencia y respeto hacia nuestros clientes en cada entrega.</p>
+      </div>
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h4 class="text-green-900 font-bold text-xl mb-3">🥥 Frescura</h4>
+        <p>Garantizamos coco recién cortado, directo del campo a tus manos.</p>
+      </div>
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h4 class="text-green-900 font-bold text-xl mb-3">👨‍👩‍👧‍👦 Trabajo Local</h4>
+        <p>Impulsamos la economía de Oaxaca apoyando a productores y familias locales.</p>
+      </div>
+      <div class="glass-card p-8 rounded-3xl shadow-lg bg-white/90 text-gray-900">
+        <h4 class="text-green-900 font-bold text-xl mb-3">⭐ Calidad</h4>
+        <p>Cada coco conserva su sabor original y cumple con los más altos estándares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Equipo -->
+<section id="equipo" class="relative py-24 md:py-32 text-white">
+  <div class="absolute inset-0">
+    <img src="img/cocooo.jpg" alt="Fondo Equipo"
+         class="w-full h-full object-cover bg-fixed">
+    <div class="absolute inset-0 bg-[#a67c52]/60"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="img/val.jpg" alt="Equipo Cocos Martita" class="w-full rounded-3xl shadow-lg">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-6">👥 Nuestro Equipo</h2>
+      <p class="text-yellow-100 text-lg leading-relaxed">
+        En Cocos Martita contamos con un equipo de trabajo comprometido que se esfuerza día a día para ofrecer el mejor servicio y garantizar la frescura de nuestros productos.
+      </p>
+      <p class="text-yellow-100 text-lg leading-relaxed">
+        Nuestro objetivo es mantener la confianza de nuestros clientes y seguir creciendo como una familia dedicada al coco.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Envíos -->
+<section id="envios" class="relative py-24 md:py-32 text-white">
+  <div class="absolute inset-0">
+    <img src="img/valores.png" alt="Fondo Envíos"
+         class="w-full h-full object-cover bg-fixed">
+    <div class="absolute inset-0 bg-[#a67c52]/60"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="img/coquillo.jpg" alt="Envíos" class="w-full rounded-3xl shadow-lg">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-6">🚚 Envíos a Todo México</h2>
+      <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
+      <p class="text-yellow-100 text-lg leading-relaxed">
+        En Cocos Martita nos aseguramos de que la frescura del coco llegue hasta tu hogar sin importar la distancia. Realizamos envíos a todo México con el compromiso de que cada producto conserve su sabor y calidad original.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer / Contacto -->
+<footer id="contacto" class="relative py-24 md:py-32 bg-green-900 text-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12">
+    
+    <!-- Formulario lado izquierdo -->
+    <div>
+      <h2 class="text-3xl font-bold mb-6">Contactanos para tu pedido</h2>
+      <form class="space-y-4">
+        <input type="text" class="w-full p-3 rounded-lg text-gray-900" placeholder="Tu nombre" required>
+        <input type="email" class="w-full p-3 rounded-lg text-gray-900" placeholder="Correo electrónico" required>
+        <textarea class="w-full p-3 rounded-lg text-gray-900" rows="4" placeholder="Pide ahora" required></textarea>
+        <button type="submit" class="w-full py-3 bg-yellow-400 text-green-900 font-bold rounded-lg shadow-lg hover:scale-105 transition">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+
+    <!-- Ubicación al centro -->
+    <div>
+      <h2 class="text-3xl font-bold mb-6">📍 Ubicación</h2>
+      <p>Cocos Martita, Calle Constituyentes, Oaxaca</p>
+      <div class="ratio ratio-16x9 mt-4">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=...iframe exacto..." 
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Información de contacto lado derecho -->
+    <div>
+      <h2 class="text-3xl font-bold mb-6">📞 Información de contacto</h2>
+      <p class="mb-4">Venta directa del productor 🥥</p>
+      <p><strong>Teléfono:</strong> +52 951 519 14 80</p>
+      <p>
+        <a href="https://wa.me/529515191480" target="_blank" class="text-yellow-300 hover:underline">
+          WhatsApp Directo
+        </a>
+      </p>
+      <div class="flex gap-4 mt-4">
+  <!-- Facebook -->
+  <a href="https://facebook.com/cocosmartita" target="_blank">
+    <img src="img/faccebok.png" alt="Facebook" 
+         class="w-10 h-10 rounded-full border-2 border-white hover:scale-110 transition">
+  </a>
+</div>
+
+    </div>
+
+  </div>
+</footer>
+
+<!-- Mensaje final al último -->
+<div class="text-center mt-12 text-yellow-200 text-sm">
+  © 2026 Cocos Martita · Frescura Tropical desde Oaxaca 🌴
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
