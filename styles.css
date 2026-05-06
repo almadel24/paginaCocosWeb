@@ -3,54 +3,77 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Tarjetas con efecto glassmorphism */
 /* Tarjetas flotantes con efecto glassmorphism */
 .glass-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  /* Transiciones para el hover y para el JS revealOnScroll */
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, opacity 0.8s ease;
+  
+  /* Estado inicial sutil para asegurar visibilidad */
+  opacity: 0.1;
+  transform: translateY(20px);
 }
 
-.glass-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+/* Clase añadida por el JavaScript cuando la tarjeta es visible */
+.glass-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto Hover (solo funciona cuando ya está activa) */
+.glass-card.active:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(82, 183, 136, 0.15); /* Sombra con toque verde más ligero */
 }
 
 /* Textos dentro de las tarjetas */
 .glass-card h3 {
-  color: #2e7d32; /* verde tropical */
+  color: #40916C; /* Verde hoja natural */
 }
 
 .glass-card p {
   font-size: 1rem;
   line-height: 1.6;
-  text-align: justify;
   color: #333;
 }
 
 /* Hero principal */
 #inicio h1 {
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 #inicio p {
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-/* Footer */
-footer {
-  background-color: #1b5e20; /* verde más oscuro */
-}
-footer h3 {
-  color: #ffd54f; /* dorado */
-}
-footer p {
-  color: #f1f8e9;
-}
-
-.bg-cafe {
-  background-color: #a67c52; /* ejemplo de tono cafecito claro */
+/* Estilos para los Menús (Refactorización) */
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s ease;
 }
 
+.nav-link:hover {
+  background-color: white;
+  color: #8B5A2B;
+}
+
+.mobile-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: white;
+  color: #8B5A2B;
+}
