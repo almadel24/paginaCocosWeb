@@ -1,45 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JS cargado correctamente 🌴");
+  console.log("JS cargado correctamente 🌴. ¡Listo para la frescura!");
 
-  // Scroll suave en enlaces internos
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
-      const destino = document.querySelector(this.getAttribute("href"));
-      if (destino) {
-        destino.scrollIntoView({
-          behavior: "smooth"
-        });
+  // Menú Móvil
+  const menuBtn = document.getElementById('menu-btn');
+  // const closeBtn = document.getElementById('close-menu'); // Ya no es necesario para el menú dropdown
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  const toggleMenu = () => {
+    // Animación de escala y opacidad
+    mobileMenu.classList.toggle('scale-0');
+    mobileMenu.classList.toggle('scale-100');
+    mobileMenu.classList.toggle('opacity-0');
+    mobileMenu.classList.toggle('opacity-100');
+    // Animación del overlay
+    mobileOverlay.classList.toggle('opacity-0');
+    mobileOverlay.classList.toggle('opacity-100');
+    mobileOverlay.classList.toggle('pointer-events-none');
+    document.body.classList.toggle('overflow-hidden'); // Evita scroll al estar abierto
+  };
+
+  menuBtn?.addEventListener('click', toggleMenu);
+  mobileOverlay?.addEventListener('click', toggleMenu);
+  mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+  // Animación al hacer scroll con IntersectionObserver (Más eficiente)
+  const observerOptions = {
+    threshold: 0.05
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
       }
     });
-  });
+  }, observerOptions);
 
-  // Animación al hacer scroll
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll(".hover-card, .value-card, .subsection");
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add("active");
-      } else {
-        el.classList.remove("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Ejecutar al cargar para mostrar elementos visibles
+  document.querySelectorAll(".glass-card").forEach(el => observer.observe(el));
 
   // Confirmación al enviar formulario
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", function(e) {
       e.preventDefault();
-      alert("Gracias por tu mensaje 🌴. Te contactaremos pronto.");
+      const btn = form.querySelector("button");
+      const originalText = btn.innerText;
+      
+      btn.innerText = "¡Enviado con éxito! 🥥";
+      btn.style.backgroundColor = "#52B788"; // Verde más ligero para éxito
       form.reset();
+      
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.backgroundColor = "";
+      }, 3000);
     });
   }
 });
